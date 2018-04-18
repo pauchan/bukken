@@ -6,6 +6,7 @@ new_apartments_by_line = 'http://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&b
 response = requests.get(new_apartments_by_line)
 tree = html.fromstring(response.content)
 
+ui-media-body property_unit-info
 items = tree.xpath('//div[@class="property_unit-content"]/text()')
 
 #items = tree.xpath('property_unit-content')
